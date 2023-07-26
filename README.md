@@ -21,7 +21,9 @@ Chronic cerebral hypoperfusion (CCH) is a state of blood supply reduction to the
 
 ### Usage
 
-python3   ./CCHNet/train.py
+```bash
+python3   CCHNet/train.py
+```
 
 ### Data Preparation
 
@@ -29,15 +31,13 @@ python3   ./CCHNet/train.py
 
 2. The data files include train.csv test.csv, and val.csv, with formats including
 
-   ```
+   ```python
    { "name": patientID, "cch": label}
    ```
 
-   
-
 3. Create a patient dictionary. This should be a pickle file containing a dict as follows, where img is the image matrix of slice :
 
-   ```
+   ```python
    dataset = {
        "img": img_data,
        "label": torch.Tensor([y])[0],
